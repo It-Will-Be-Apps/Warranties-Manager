@@ -1,0 +1,27 @@
+{
+    "name": "ionic-angular-template",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "mounts": [
+        {
+            "source": "${localEnv:USERPROFILE}/.ssh",
+            "target": "/root/.ssh",
+            "type": "bind"
+        }
+    ],
+    "forwardPorts": [8100],
+    "postCreateCommand": "./.devcontainer/scripts/init.sh",
+    "postStartCommand": "./.devcontainer/scripts/update.sh",
+    "postAttachCommand": "./.devcontainer/scripts/status.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": []
+        }
+    },
+    "runArgs": [
+        "--name", "ionic-angular-template",
+        "--env-file", ".devcontainer/.env"
+    ]
+}
