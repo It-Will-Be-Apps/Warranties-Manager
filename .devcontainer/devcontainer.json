@@ -1,5 +1,5 @@
 {
-    "name": "ionic-angular-template",
+    "name": "bevr-warranties-manager",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -21,7 +21,7 @@
         }
     },
     "runArgs": [
-        "--name", "ionic-angular-template",
+        "--name", "bevr-warranties-manager",
         "--env-file", ".devcontainer/.env"
     ]
 }
